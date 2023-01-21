@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -270,7 +270,7 @@ namespace TaskExam
         {
             Stack<int> towns = new Stack<int>();
             Stack<int> coins = new Stack<int>();
-            int money = 0, maxMoney = 0;
+            int money = 0, maxMoney = -1;
             int n = mapData.Length;
 
             List<int>[] connectedTowns = new List<int>[100];
@@ -295,7 +295,6 @@ namespace TaskExam
 
             FindWay(idStart);
 
-            if (maxMoney == 0) return -1;
             return maxMoney;
 
 
